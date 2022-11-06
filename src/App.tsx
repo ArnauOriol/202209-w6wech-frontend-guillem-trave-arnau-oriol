@@ -6,11 +6,7 @@ const App = () => {
 
   getRobots();
 
-  return (
-    <div>
-      <RobotCard />
-    </div>
-  );
+  return <div>Quiero irme a casa</div>;
 };
 
 export default App;
