@@ -38,6 +38,10 @@
 
 - the name of the robot
 - the image of the robot
+- the robot stats
+- 2 buttons
+  - delete button
+  - modify button
 
 ## Button
 
