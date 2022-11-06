@@ -1,4 +1,4 @@
-import useApi from "./hooks/useApi.js";
+import useApi from "./hooks/useApi";
 
 const App = () => {
   const { getRobots } = useApi();
