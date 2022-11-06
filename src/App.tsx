@@ -6,7 +6,22 @@ const App = () => {
 
   getRobots();
 
-  return <div>Quiero irme a casa</div>;
+  const robotCoso = {
+    _id: "nooosheraaardparaaaanoooo",
+    name: "Coso",
+    image: "https://robotcoso.png",
+    stats: {
+      speed: 3,
+      strength: 6,
+      createdAt: "66/66/6666",
+    },
+  };
+
+  return (
+    <div>
+      <RobotCard robot={robotCoso} />
+    </div>
+  );
 };
 
 export default App;
