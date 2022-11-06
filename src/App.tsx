@@ -9,14 +9,14 @@ const App = () => {
 
   useEffect(() => {
     getRobots();
-  }, []);
+  }, [getRobots]);
 
   return (
     <div>
       <ul>
         {robots.map((robot) => (
-                <RobotCard robot={robot} key={robot._id} />
-                ))}
+          <RobotCard robot={robot} key={robot._id} />
+        ))}
       </ul>
     </div>
   );
