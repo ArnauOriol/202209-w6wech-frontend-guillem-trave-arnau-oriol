@@ -5,7 +5,7 @@ const mockRobots: Robot[] = [
     stats: {
       speed: 1,
       strength: 10,
-      createdAt: new Date(),
+      createdAt: "2022-11-06T17:05:38.649Z",
     },
     _id: "636563d18d7ffccdc807e73d",
     name: "machacatuercas",
@@ -15,7 +15,7 @@ const mockRobots: Robot[] = [
     stats: {
       speed: 5,
       strength: 2,
-      createdAt: new Date(),
+      createdAt: "2022-11-06T17:05:38.649Z",
     },
     _id: "636563d18d7ffccdc807e73f",
     name: "bender",

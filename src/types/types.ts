@@ -12,5 +12,5 @@ export interface Robot {
 interface Stats {
   speed: number;
   strength: number;
-  createdAt: Date;
+  createdAt: string;
 }
