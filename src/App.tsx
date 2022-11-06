@@ -1,3 +1,4 @@
+import RobotCard from "./components/RobotCard/RobotCard";
 import useApi from "./hooks/useApi";
 
 const App = () => {
@@ -5,7 +6,11 @@ const App = () => {
 
   getRobots();
 
-  return <p>hola</p>;
+  return (
+    <div>
+      <RobotCard />
+    </div>
+  );
 };
 
 export default App;
