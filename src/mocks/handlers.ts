@@ -1,5 +1,5 @@
 import { rest } from "msw";
-import mockRobots from "./mockRobots";
+import {mockRobots} from "./mockRobots";
 
 const { REACT_APP_API_URL: apiUrl } = process.env;
 

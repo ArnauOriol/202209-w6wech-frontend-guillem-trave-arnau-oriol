@@ -1,6 +1,6 @@
 import { Robot } from "../types/types";
 
-const mockRobots: Robot[] = [
+export const mockRobots: Robot[] = [
   {
     stats: {
       speed: 1,
@@ -23,4 +23,13 @@ const mockRobots: Robot[] = [
   },
 ];
 
-export default mockRobots;
+export const robotMock = {
+  stats: {
+    speed: 1,
+    strength: 10,
+    createdAt: "2022-11-06T17:05:38.649Z",
+  },
+  _id: "636563d18d7ffccdc807e73d",
+  name: "machacatuercas",
+  image: "https//robot.png",
+};
