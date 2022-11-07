@@ -1,3 +1,4 @@
+import moment from "moment";
 import { Robot } from "../../types/types";
 import RobotCardStyled from "./RobotCardStyled";
 
@@ -11,6 +12,8 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
     image,
     stats: { speed, strength, createdAt },
   } = robot;
+
+  const date = moment(createdAt).format("DD/MM/YYYY");
 
   return (
     <RobotCardStyled>
@@ -26,7 +29,7 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
           <span className="bold">strength:</span> {strength}
         </li>
         <li className="robot__date">
-          <span className="bold">created at:</span> {createdAt}
+          <span className="bold">created at:</span> {date}
         </li>
       </ul>
     </RobotCardStyled>
