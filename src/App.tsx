@@ -1,25 +1,23 @@
+import { useEffect } from "react";
 import RobotCard from "./components/RobotCard/RobotCard";
 import useApi from "./hooks/useApi";
+import { useAppSelector } from "./redux/hooks";
 
 const App = () => {
   const { getRobots } = useApi();
+  const robots = useAppSelector((state) => state.robots.list);
 
-  getRobots();
-
-  const robotCoso = {
-    _id: "nooosheraaardparaaaanoooo",
-    name: "Coso",
-    image: "https://robotcoso.png",
-    stats: {
-      speed: 3,
-      strength: 6,
-      createdAt: "66/66/6666",
-    },
-  };
+  useEffect(() => {
+    getRobots();
+  }, [getRobots]);
 
   return (
     <div>
-      <RobotCard robot={robotCoso} />
+      <ul>
+        {robots.map((robot) => (
+          <RobotCard robot={robot} key={robot._id} />
+        ))}
+      </ul>
     </div>
   );
 };
