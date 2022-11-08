@@ -1,5 +1,6 @@
 import moment from "moment";
 import { Robot } from "../../types/types";
+import Button from "../Button/Button";
 import RobotCardStyled from "./RobotCardStyled";
 
 interface RobotCardProps {
@@ -16,7 +17,7 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
   const formatDate = moment(createdAt).format("DD/MM/YYYY");
 
   return (
-    <RobotCardStyled>
+    <RobotCardStyled className="robot__card">
       <div className="robot__wrapper">
         <h2 className="robot__name">{name}</h2>
         <img src={image} alt={`the robot ${name}`} className="robot__image" />
@@ -32,6 +33,7 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
           <span className="bold">created at:</span> {formatDate}
         </li>
       </ul>
+      <Button text="Delete" action={() => {}} />
     </RobotCardStyled>
   );
 };

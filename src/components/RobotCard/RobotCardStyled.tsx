@@ -7,6 +7,10 @@ const RobotCardStyled = styled.li`
   padding: 10px;
   list-style: none;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   .robot {
     &__wrapper {
       display: flex;
