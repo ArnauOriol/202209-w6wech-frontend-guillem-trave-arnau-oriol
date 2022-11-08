@@ -13,7 +13,7 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
     stats: { speed, strength, createdAt },
   } = robot;
 
-  const date = moment(createdAt).format("DD/MM/YYYY");
+  const formatDate = moment(createdAt).format("DD/MM/YYYY");
 
   return (
     <RobotCardStyled>
@@ -29,7 +29,7 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
           <span className="bold">strength:</span> {strength}
         </li>
         <li className="robot__date">
-          <span className="bold">created at:</span> {date}
+          <span className="bold">created at:</span> {formatDate}
         </li>
       </ul>
     </RobotCardStyled>

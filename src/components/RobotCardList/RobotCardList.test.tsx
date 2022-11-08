@@ -1,11 +1,19 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { mockRobots } from "../../mocks/mockRobots";
+import renderWithProviders from "../../mocks/renderWithProviders";
 import RobotCardList from "./RobotCardList";
-import mockWrapper from "../../mocks/mockWrapper";
 
 describe("Given a RobotCardList component", () => {
   describe("When its rendered", () => {
     test("Then it should show 1 heading of level 1 that says 'ROBOTS'", () => {
-      render(<RobotCardList />, { wrapper: mockWrapper });
+      renderWithProviders(<RobotCardList />, {
+        preloadedState: {
+          robots: {
+            list: mockRobots,
+          },
+        },
+      });
+
       const headingTitle = screen.queryByRole("heading", { level: 1 });
 
       expect(headingTitle).toBeInTheDocument();

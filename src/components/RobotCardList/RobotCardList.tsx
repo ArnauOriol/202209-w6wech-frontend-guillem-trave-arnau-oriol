@@ -16,8 +16,8 @@ const RobotCardList = (): JSX.Element => {
     <RobotCardListStyled>
       <h1 className="list__title">ROBOTS</h1>
       <ul className="list__wrapper">
-        {robots.map((robot) => (
-          <RobotCard robot={robot} key={robot._id} />
+        {robots.map((robot, index) => (
+          <RobotCard robot={robot} key={index} />
         ))}
       </ul>
     </RobotCardListStyled>

@@ -1,4 +1,4 @@
-import { renderHook } from "@testing-library/react";
+import { act, renderHook, waitFor } from "@testing-library/react";
 import mockWrapper from "../mocks/mockWrapper";
 import { store } from "../redux/store";
 import useApi from "./useApi";
@@ -10,9 +10,13 @@ describe("Given a useApi custom hook", () => {
     test("Then the dispatch should be called with loadRobots", async () => {
       const { result } = renderHook(() => useApi(), { wrapper: mockWrapper });
 
-      await result.current.getRobots();
+      act(() => {
+        result.current.getRobots();
+      });
 
-      expect(dispatch).toHaveBeenCalled();
+      await waitFor(() => {
+        expect(dispatch).toHaveBeenCalled();
+      });
     });
   });
 });
